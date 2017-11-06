@@ -1,0 +1,116 @@
+
+
+Started GET "/api/sketches/?page=1" for 127.0.0.1 at 2017-11-04 22:57:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (41.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[35mSketch Load (0.7ms)[0m  SELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0
+Completed 200 OK in 81ms (Views: 16.8ms | ActiveRecord: 42.9ms)
+
+
+Started POST "/api/sketches" for 127.0.0.1 at 2017-11-04 22:57:53 -0400
+Processing by SketchesController#create as */*
+  Parameters: {"data"=>{"objects"=>[{"type"=>"path", "originX"=>"center", "originY"=>"center", "left"=>279.125, "top"=>181.77653077165047, "width"=>240.75, "height"=>138.7, "fill"=>nil, "stroke"=>"black", "strokeWidth"=>2, "strokeDashArray"=>nil, "strokeLineCap"=>"round", "strokeLineJoin"=>"round", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "pathOffset"=>{"x"=>279.125, "y"=>181.77653077165047}, "path"=>[["M", 270, 140.125], ["Q", 270, 140.125, 270.5, 140.125], ["Q", 271, 140.125, 270.75, 140.125], ["Q", 270.5, 140.125, 270, 141.625], ["Q", 269.5, 143.125, 268.5, 145.625], ["Q", 267.5, 148.125, 265.5, 151.625], ["Q", 263.5, 155.125, 258.5, 160.625], ["Q", 253.5, 166.125, 239.5, 176.625], ["Q", 225.5, 187.125, 215, 192.125], ["Q", 204.5, 197.125, 192, 199.625], ["Q", 179.5, 202.125, 174, 201.125], ["Q", 168.5, 200.125, 165.5, 198.125], ["Q", 162.5, 196.125, 161.5, 194.125], ["Q", 160.5, 192.125, 159.5, 186.125], ["Q", 158.5, 180.125, 159.5, 173.625], ["Q", 160.5, 167.125, 162, 157.625], ["Q", 163.5, 148.125, 167.5, 139.125], ["Q", 171.5, 130.125, 175.5, 125.125], ["Q", 179.5, 120.125, 182.5, 117.625], ["Q", 185.5, 115.125, 190.5, 113.625], ["Q", 195.5, 112.125, 200.5, 113.125], ["Q", 205.5, 114.125, 211, 116.625], ["Q", 216.5, 119.125, 224, 123.125], ["Q", 231.5, 127.125, 237.5, 131.625], ["Q", 243.5, 136.125, 251, 142.125], ["Q", 258.5, 148.125, 266, 154.625], ["Q", 273.5, 161.125, 280, 167.125], ["Q", 286.5, 173.125, 291.5, 178.625], ["Q", 296.5, 184.125, 302.5, 189.625], ["Q", 308.5, 195.125, 313.5, 200.125], ["Q", 318.5, 205.125, 326.5, 211.625], ["Q", 334.5, 218.125, 343, 225.125], ["Q", 351.5, 232.125, 356, 234.625], ["Q", 360.5, 237.125, 364.5, 239.125], ["Q", 368.5, 241.125, 374, 243.125], ["Q", 379.5, 245.125, 384, 246.625], ["Q", 388.5, 248.125, 392.5, 249.625], ["Q", 396.5, 251.125, 398, 251.125], ["L", 399.5, 251.125]]}]}, "sketch"=>{"data"=>{"objects"=>[{"type"=>"path", "originX"=>"center", "originY"=>"center", "left"=>279.125, "top"=>181.77653077165047, "width"=>240.75, "height"=>138.7, "fill"=>nil, "stroke"=>"black", "strokeWidth"=>2, "strokeDashArray"=>nil, "strokeLineCap"=>"round", "strokeLineJoin"=>"round", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "pathOffset"=>{"x"=>279.125, "y"=>181.77653077165047}, "path"=>[["M", 270, 140.125], ["Q", 270, 140.125, 270.5, 140.125], ["Q", 271, 140.125, 270.75, 140.125], ["Q", 270.5, 140.125, 270, 141.625], ["Q", 269.5, 143.125, 268.5, 145.625], ["Q", 267.5, 148.125, 265.5, 151.625], ["Q", 263.5, 155.125, 258.5, 160.625], ["Q", 253.5, 166.125, 239.5, 176.625], ["Q", 225.5, 187.125, 215, 192.125], ["Q", 204.5, 197.125, 192, 199.625], ["Q", 179.5, 202.125, 174, 201.125], ["Q", 168.5, 200.125, 165.5, 198.125], ["Q", 162.5, 196.125, 161.5, 194.125], ["Q", 160.5, 192.125, 159.5, 186.125], ["Q", 158.5, 180.125, 159.5, 173.625], ["Q", 160.5, 167.125, 162, 157.625], ["Q", 163.5, 148.125, 167.5, 139.125], ["Q", 171.5, 130.125, 175.5, 125.125], ["Q", 179.5, 120.125, 182.5, 117.625], ["Q", 185.5, 115.125, 190.5, 113.625], ["Q", 195.5, 112.125, 200.5, 113.125], ["Q", 205.5, 114.125, 211, 116.625], ["Q", 216.5, 119.125, 224, 123.125], ["Q", 231.5, 127.125, 237.5, 131.625], ["Q", 243.5, 136.125, 251, 142.125], ["Q", 258.5, 148.125, 266, 154.625], ["Q", 273.5, 161.125, 280, 167.125], ["Q", 286.5, 173.125, 291.5, 178.625], ["Q", 296.5, 184.125, 302.5, 189.625], ["Q", 308.5, 195.125, 313.5, 200.125], ["Q", 318.5, 205.125, 326.5, 211.625], ["Q", 334.5, 218.125, 343, 225.125], ["Q", 351.5, 232.125, 356, 234.625], ["Q", 360.5, 237.125, 364.5, 239.125], ["Q", 368.5, 241.125, 374, 243.125], ["Q", 379.5, 245.125, 384, 246.625], ["Q", 388.5, 248.125, 392.5, 249.625], ["Q", 396.5, 251.125, 398, 251.125], ["L", 399.5, 251.125]]}]}}}
+  [1m[36m (1.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "sketches" ("data", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["data", "{\"objects\":[{\"type\":\"path\",\"originX\":\"center\",\"originY\":\"center\",\"left\":279.125,\"top\":181.77653077165047,\"width\":240.75,\"height\":138.7,\"fill\":null,\"stroke\":\"black\",\"strokeWidth\":2,\"strokeDashArray\":null,\"strokeLineCap\":\"round\",\"strokeLineJoin\":\"round\",\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"clipTo\":null,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"globalCompositeOperation\":\"source-over\",\"transformMatrix\":null,\"skewX\":0,\"skewY\":0,\"pathOffset\":{\"x\":279.125,\"y\":181.77653077165047},\"path\":[[\"M\",270,140.125],[\"Q\",270,140.125,270.5,140.125],[\"Q\",271,140.125,270.75,140.125],[\"Q\",270.5,140.125,270,141.625],[\"Q\",269.5,143.125,268.5,145.625],[\"Q\",267.5,148.125,265.5,151.625],[\"Q\",263.5,155.125,258.5,160.625],[\"Q\",253.5,166.125,239.5,176.625],[\"Q\",225.5,187.125,215,192.125],[\"Q\",204.5,197.125,192,199.625],[\"Q\",179.5,202.125,174,201.125],[\"Q\",168.5,200.125,165.5,198.125],[\"Q\",162.5,196.125,161.5,194.125],[\"Q\",160.5,192.125,159.5,186.125],[\"Q\",158.5,180.125,159.5,173.625],[\"Q\",160.5,167.125,162,157.625],[\"Q\",163.5,148.125,167.5,139.125],[\"Q\",171.5,130.125,175.5,125.125],[\"Q\",179.5,120.125,182.5,117.625],[\"Q\",185.5,115.125,190.5,113.625],[\"Q\",195.5,112.125,200.5,113.125],[\"Q\",205.5,114.125,211,116.625],[\"Q\",216.5,119.125,224,123.125],[\"Q\",231.5,127.125,237.5,131.625],[\"Q\",243.5,136.125,251,142.125],[\"Q\",258.5,148.125,266,154.625],[\"Q\",273.5,161.125,280,167.125],[\"Q\",286.5,173.125,291.5,178.625],[\"Q\",296.5,184.125,302.5,189.625],[\"Q\",308.5,195.125,313.5,200.125],[\"Q\",318.5,205.125,326.5,211.625],[\"Q\",334.5,218.125,343,225.125],[\"Q\",351.5,232.125,356,234.625],[\"Q\",360.5,237.125,364.5,239.125],[\"Q\",368.5,241.125,374,243.125],[\"Q\",379.5,245.125,384,246.625],[\"Q\",388.5,248.125,392.5,249.625],[\"Q\",396.5,251.125,398,251.125],[\"L\",399.5,251.125]]}]}"], ["created_at", "2017-11-05 02:57:53.974196"], ["updated_at", "2017-11-05 02:57:53.974196"]]
+  [1m[36m (41.0ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 53ms (Views: 0.6ms | ActiveRecord: 42.8ms)
+
+
+Started GET "/api/sketches/?page=1" for 127.0.0.1 at 2017-11-04 22:57:54 -0400
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[35mSketch Load (0.5ms)[0m  SELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/sketches/?page=1" for 127.0.0.1 at 2017-11-04 22:57:57 -0400
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mSketch Load (0.4ms)[0m  [1mSELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-11-06 17:10:23 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/luisa/.rvm/gems/ruby-2.3.3/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 64ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/sketches" for ::1 at 2017-11-06 17:10:37 -0500
+Processing by SketchesController#index as */*
+  [1m[35mSketch Load (1.0ms)[0m  SELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0
+Completed 200 OK in 107ms (Views: 6.4ms | ActiveRecord: 60.5ms)
+
+
+Started GET "/api/sketches/?page=1" for ::1 at 2017-11-06 17:12:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[35mSketch Load (0.6ms)[0m  SELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0
+Completed 200 OK in 34ms (Views: 5.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/sketches" for ::1 at 2017-11-06 17:14:26 -0500
+Processing by SketchesController#index as HTML
+  [1m[36mSketch Load (0.3ms)[0m  [1mSELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/sketches/?page=1" for ::1 at 2017-11-06 17:17:33 -0500
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[35mSketch Load (0.3ms)[0m  SELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/sketches/1" for ::1 at 2017-11-06 17:17:50 -0500
+Processing by SketchesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mSketch Load (0.3ms)[0m  [1mSELECT  "sketches".* FROM "sketches" WHERE "sketches"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 39ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/sketches/?page=1" for ::1 at 2017-11-06 17:18:06 -0500
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[35mSketch Load (0.5ms)[0m  SELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/sketches/?page=1" for ::1 at 2017-11-06 17:20:54 -0500
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mSketch Load (0.3ms)[0m  [1mSELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/sketches" for ::1 at 2017-11-06 17:20:54 -0500
+Processing by SketchesController#create as */*
+  Parameters: {"data"=>{"objects"=>[{"type"=>"rect", "originX"=>"left", "originY"=>"top", "left"=>62, "top"=>63.13, "width"=>472, "height"=>287, "fill"=>"transparent", "stroke"=>"purple", "strokeWidth"=>10, "strokeDashArray"=>nil, "strokeLineCap"=>"butt", "strokeLineJoin"=>"miter", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "rx"=>0, "ry"=>0}, {"type"=>"rect", "originX"=>"left", "originY"=>"top", "left"=>90, "top"=>88.13, "width"=>418, "height"=>237, "fill"=>"transparent", "stroke"=>"purple", "strokeWidth"=>10, "strokeDashArray"=>nil, "strokeLineCap"=>"butt", "strokeLineJoin"=>"miter", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "rx"=>0, "ry"=>0}, {"type"=>"rect", "originX"=>"left", "originY"=>"top", "left"=>120, "top"=>110.13, "width"=>367, "height"=>194, "fill"=>"transparent", "stroke"=>"purple", "strokeWidth"=>10, "strokeDashArray"=>nil, "strokeLineCap"=>"butt", "strokeLineJoin"=>"miter", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "rx"=>0, "ry"=>0}, {"type"=>"rect", "originX"=>"left", "originY"=>"top", "left"=>145, "top"=>132.13, "width"=>228, "height"=>57, "fill"=>"transparent", "stroke"=>"purple", "strokeWidth"=>100, "strokeDashArray"=>nil, "strokeLineCap"=>"butt", "strokeLineJoin"=>"miter", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "rx"=>0, "ry"=>0}]}, "sketch"=>{"data"=>{"objects"=>[{"type"=>"rect", "originX"=>"left", "originY"=>"top", "left"=>62, "top"=>63.13, "width"=>472, "height"=>287, "fill"=>"transparent", "stroke"=>"purple", "strokeWidth"=>10, "strokeDashArray"=>nil, "strokeLineCap"=>"butt", "strokeLineJoin"=>"miter", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "rx"=>0, "ry"=>0}, {"type"=>"rect", "originX"=>"left", "originY"=>"top", "left"=>90, "top"=>88.13, "width"=>418, "height"=>237, "fill"=>"transparent", "stroke"=>"purple", "strokeWidth"=>10, "strokeDashArray"=>nil, "strokeLineCap"=>"butt", "strokeLineJoin"=>"miter", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "rx"=>0, "ry"=>0}, {"type"=>"rect", "originX"=>"left", "originY"=>"top", "left"=>120, "top"=>110.13, "width"=>367, "height"=>194, "fill"=>"transparent", "stroke"=>"purple", "strokeWidth"=>10, "strokeDashArray"=>nil, "strokeLineCap"=>"butt", "strokeLineJoin"=>"miter", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "rx"=>0, "ry"=>0}, {"type"=>"rect", "originX"=>"left", "originY"=>"top", "left"=>145, "top"=>132.13, "width"=>228, "height"=>57, "fill"=>"transparent", "stroke"=>"purple", "strokeWidth"=>100, "strokeDashArray"=>nil, "strokeLineCap"=>"butt", "strokeLineJoin"=>"miter", "strokeMiterLimit"=>10, "scaleX"=>1, "scaleY"=>1, "angle"=>0, "flipX"=>false, "flipY"=>false, "opacity"=>1, "shadow"=>nil, "visible"=>true, "clipTo"=>nil, "backgroundColor"=>"", "fillRule"=>"nonzero", "globalCompositeOperation"=>"source-over", "transformMatrix"=>nil, "skewX"=>0, "skewY"=>0, "rx"=>0, "ry"=>0}]}}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (41.3ms)[0m  [1mINSERT INTO "sketches" ("data", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["data", "{\"objects\":[{\"type\":\"rect\",\"originX\":\"left\",\"originY\":\"top\",\"left\":62,\"top\":63.13,\"width\":472,\"height\":287,\"fill\":\"transparent\",\"stroke\":\"purple\",\"strokeWidth\":10,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeLineJoin\":\"miter\",\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"clipTo\":null,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"globalCompositeOperation\":\"source-over\",\"transformMatrix\":null,\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0},{\"type\":\"rect\",\"originX\":\"left\",\"originY\":\"top\",\"left\":90,\"top\":88.13,\"width\":418,\"height\":237,\"fill\":\"transparent\",\"stroke\":\"purple\",\"strokeWidth\":10,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeLineJoin\":\"miter\",\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"clipTo\":null,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"globalCompositeOperation\":\"source-over\",\"transformMatrix\":null,\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0},{\"type\":\"rect\",\"originX\":\"left\",\"originY\":\"top\",\"left\":120,\"top\":110.13,\"width\":367,\"height\":194,\"fill\":\"transparent\",\"stroke\":\"purple\",\"strokeWidth\":10,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeLineJoin\":\"miter\",\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"clipTo\":null,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"globalCompositeOperation\":\"source-over\",\"transformMatrix\":null,\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0},{\"type\":\"rect\",\"originX\":\"left\",\"originY\":\"top\",\"left\":145,\"top\":132.13,\"width\":228,\"height\":57,\"fill\":\"transparent\",\"stroke\":\"purple\",\"strokeWidth\":100,\"strokeDashArray\":null,\"strokeLineCap\":\"butt\",\"strokeLineJoin\":\"miter\",\"strokeMiterLimit\":10,\"scaleX\":1,\"scaleY\":1,\"angle\":0,\"flipX\":false,\"flipY\":false,\"opacity\":1,\"shadow\":null,\"visible\":true,\"clipTo\":null,\"backgroundColor\":\"\",\"fillRule\":\"nonzero\",\"globalCompositeOperation\":\"source-over\",\"transformMatrix\":null,\"skewX\":0,\"skewY\":0,\"rx\":0,\"ry\":0}]}"], ["created_at", "2017-11-06 22:20:54.877989"], ["updated_at", "2017-11-06 22:20:54.877989"]]
+  [1m[35m (12.9ms)[0m  COMMIT
+Completed 201 Created in 76ms (Views: 0.8ms | ActiveRecord: 54.3ms)
+
+
+Started GET "/api/sketches/?page=1" for ::1 at 2017-11-06 17:20:57 -0500
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mSketch Load (0.2ms)[0m  [1mSELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/sketches/?page=1" for ::1 at 2017-11-06 17:25:34 -0500
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[35mSketch Load (0.3ms)[0m  SELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/sketches/?page=1" for 127.0.0.1 at 2017-11-06 17:27:04 -0500
+Processing by SketchesController#index as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mSketch Load (3.6ms)[0m  [1mSELECT  "sketches".* FROM "sketches"  ORDER BY id DESC LIMIT 5 OFFSET 0[0m
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 3.6ms)
