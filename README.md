@@ -1,7 +1,11 @@
 # PixelClick
 ### Sketch it out.
 
-PixelClick is a basic drawing app in React.js using the react-sketch package.
+This is a fork (of sorts) of [PixelClick](https://github.com/weezwo/pixel-click): a basic drawing app in React.js using the react-sketch package. It has been retooled for deployment on heroku.
+
+## Structure
+
+This fork is comprised of two repositories: pixel-click-client and pixel-click-api. The client is written in React and Redux and proxies to the Rails API.
 
 ## Installation/Development
 
